@@ -1,48 +1,36 @@
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-white/80 py-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-10 mb-12">
+    <footer className="bg-goon-dark border-t border-white/[0.06] py-12 px-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
-          <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: 'var(--font-geist), system-ui' }}>
+          <div className="text-center md:text-left">
+            <h3
+              className="text-2xl font-black text-white mb-2"
+              style={{ fontFamily: 'var(--font-archivo)' }}
+            >
               GOON
             </h3>
-            <p className="text-sm text-white/50 leading-relaxed max-w-sm">
-              On-demand custom 3D printing. Upload, print, ship — it&apos;s that simple. Based in the cloud, delivering worldwide.
+            <p className="text-sm text-white/30" style={{ fontFamily: 'var(--font-satoshi)' }}>
+              Your Space. Your Style. Your Sanctuary.
             </p>
           </div>
 
-          {/* Product */}
-          <div>
-            <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Product</h4>
-            <ul className="space-y-2.5">
-              <li><a href="#how-it-works" className="text-sm text-white/50 hover:text-white transition-colors">How It Works</a></li>
-              <li><a href="#materials" className="text-sm text-white/50 hover:text-white transition-colors">Materials</a></li>
-              <li><a href="#pricing" className="text-sm text-white/50 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#faq" className="text-sm text-white/50 hover:text-white transition-colors">FAQ</a></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Company</h4>
-            <ul className="space-y-2.5">
-              <li><a href="#quote-form" className="text-sm text-white/50 hover:text-white transition-colors">Contact</a></li>
-              <li><span className="text-sm text-white/50">Careers (coming soon)</span></li>
-              <li><span className="text-sm text-white/50">Blog (coming soon)</span></li>
-            </ul>
+          {/* Location */}
+          <div className="text-center md:text-right">
+            <p className="text-sm text-white/30" style={{ fontFamily: 'var(--font-satoshi)' }}>
+              Location coming soon
+            </p>
+            <p className="text-xs text-white/15 mt-1" style={{ fontFamily: 'var(--font-satoshi)' }}>
+              Somewhere worth the drive
+            </p>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/30">
+        <div className="mt-8 pt-6 border-t border-white/[0.06] text-center">
+          <p className="text-xs text-white/15" style={{ fontFamily: 'var(--font-satoshi)' }}>
             &copy; {new Date().getFullYear()} Goon. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <span className="text-xs text-white/30 hover:text-white/50 transition-colors cursor-pointer">Privacy Policy</span>
-            <span className="text-xs text-white/30 hover:text-white/50 transition-colors cursor-pointer">Terms of Service</span>
-          </div>
         </div>
       </div>
     </footer>

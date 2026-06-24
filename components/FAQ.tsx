@@ -3,32 +3,20 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: 'What file formats do you accept?',
-    answer: 'We accept STL, OBJ, STEP, and 3MF files. If you have a different format, reach out and we can usually convert it for you.',
+    question: 'Is Goon only for gay men?',
+    answer: 'Goon is designed with gay men in mind — our space, our language, our service. That said, everyone is welcome who respects that vision. Trans men, nonbinary folks, and allies who appreciate a safe, affirming environment are all welcome.',
   },
   {
-    question: 'What is the maximum print size?',
-    answer: 'Our largest printer supports builds up to 300mm × 300mm × 400mm. For larger parts, we can split the design and assemble it post-print.',
+    question: 'When are you opening?',
+    answer: 'We don\'t have a firm date yet — we\'re still finalizing the buildout and hiring our team. Join the waitlist and we\'ll let you know the moment we have a timeline.',
   },
   {
-    question: 'How accurate are your prints?',
-    answer: 'FDM prints have a tolerance of ±0.2mm. SLA resin prints are even more precise at ±0.1mm. Layer heights range from 0.05mm to 0.3mm depending on the finish you choose.',
+    question: 'What makes Goon different from a regular barbershop?',
+    answer: 'Everything is intentional — from the booking experience to the waiting room music to the products on our shelves. You won\'t have to explain yourself, educate your stylist, or wonder if the person next to you is comfortable. We built this specifically for you.',
   },
   {
-    question: 'Do you offer design help?',
-    answer: 'Yes. If your file needs modifications — wall thickness adjustments, support optimization, or scaling — our design team can help. This service is included for Professional and Production tiers.',
-  },
-  {
-    question: 'What about shipping?',
-    answer: 'We ship worldwide. Domestic orders typically arrive in 3–5 business days. International shipping takes 7–14 business days. All orders are carefully packaged to prevent damage.',
-  },
-  {
-    question: 'Can I get a sample before committing to a large order?',
-    answer: 'Absolutely. We recommend ordering a single sample first. Many customers start with our Hobby tier to test fit and finish before moving to larger quantities.',
-  },
-  {
-    question: 'What if my print arrives damaged?',
-    answer: 'We stand behind our quality. If your order arrives damaged or doesn\'t meet the agreed specifications, we\'ll reprint and reship it at no cost.',
+    question: 'How do I book?',
+    answer: 'Once we launch, booking will be available online and through our app. For now, join the waitlist and we\'ll send you early access to our booking system before it goes public.',
   },
 ]
 
@@ -40,30 +28,32 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-24 px-6 lattice-bg">
+    <section id="faq" className="py-24 px-6 bg-goon-dark">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-charcoal" style={{ fontFamily: 'var(--font-geist), system-ui' }}>
-            Frequently Asked Questions
+          <h2
+            className="text-3xl md:text-5xl font-black mb-4 text-white tracking-tight"
+            style={{ fontFamily: 'var(--font-archivo)' }}
+          >
+            FAQ
           </h2>
-          <p className="text-dark-gray/70">
-            Everything you need to know before placing your first order.
-          </p>
         </div>
 
         <div className="space-y-3">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white/80 backdrop-blur-sm rounded-xl border border-sand/20 overflow-hidden transition-shadow hover:shadow-sm"
+              className="rounded-2xl border border-white/[0.06] bg-white/[0.03] overflow-hidden"
             >
               <button
                 onClick={() => toggle(index)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                className="w-full flex items-center justify-between p-6 text-left"
               >
-                <span className="font-semibold text-charcoal pr-4">{faq.question}</span>
+                <span className="font-bold text-white pr-4 text-sm md:text-base" style={{ fontFamily: 'var(--font-satoshi)' }}>
+                  {faq.question}
+                </span>
                 <svg
-                  className={`w-5 h-5 text-dark-gray/40 flex-shrink-0 transition-transform duration-200 ${
+                  className={`w-5 h-5 text-white/30 flex-shrink-0 transition-transform duration-200 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -78,7 +68,7 @@ export default function FAQ() {
                   openIndex === index ? 'max-h-48' : 'max-h-0'
                 }`}
               >
-                <p className="px-5 pb-5 text-sm text-dark-gray/70 leading-relaxed">
+                <p className="px-6 pb-6 text-sm text-white/40 leading-relaxed" style={{ fontFamily: 'var(--font-satoshi)' }}>
                   {faq.answer}
                 </p>
               </div>

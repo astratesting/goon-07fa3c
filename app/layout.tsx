@@ -1,12 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Archivo_Black } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const archivoBlack = Archivo_Black({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-archivo',
+})
 
 export const metadata: Metadata = {
-  title: 'Goon | On-Demand Custom 3D Printing',
-  description: 'Professional 3D printing services with fast turnaround. Upload your design, choose your material, and we\'ll bring your vision to life.',
+  title: 'Goon — Your Space. Your Style. Your Sanctuary.',
+  description: 'A safe, affirming grooming space for gay men. Haircuts, grooming, facials, and massage — built for you. Coming soon.',
 }
 
 export default function RootLayout({
@@ -16,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${archivoBlack.className}`}>
         {children}
       </body>
     </html>

@@ -13,17 +13,16 @@ export default function Waitlist() {
   }
 
   return (
-    <section className="py-20 px-6 bg-white/50">
+    <section id="waitlist" className="py-24 px-6 bg-goon-black">
       <div className="max-w-2xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 bg-mint/20 rounded-full px-4 py-1.5 mb-6">
-          <span className="text-sm font-medium text-charcoal">Be the first to know</span>
-        </div>
-
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-charcoal" style={{ fontFamily: 'var(--font-geist), system-ui' }}>
+        <h2
+          className="text-3xl md:text-5xl font-black mb-4 text-white tracking-tight"
+          style={{ fontFamily: 'var(--font-archivo)' }}
+        >
           Join the Waitlist
         </h2>
-        <p className="text-dark-gray/70 mb-8">
-          Sign up for early access and launch-day pricing. We&apos;ll only email you when we&apos;re ready — no spam, ever.
+        <p className="text-white/40 mb-10 max-w-md mx-auto" style={{ fontFamily: 'var(--font-satoshi)' }}>
+          Be the first to know when we open our doors. Early access, launch pricing, zero spam.
         </p>
 
         {!submitted ? (
@@ -34,20 +33,25 @@ export default function Waitlist() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 px-5 py-3 rounded-xl border border-sand/30 bg-white focus:outline-none focus:ring-2 focus:ring-sky-blue/50 focus:border-sky-blue transition-all text-charcoal placeholder:text-dark-gray/40"
+              className="flex-1 px-5 py-3.5 rounded-xl border border-white/10 bg-white/[0.05] focus:outline-none focus:ring-2 focus:ring-goon-orange/50 focus:border-goon-orange/50 transition-all text-white placeholder:text-white/30"
+              style={{ fontFamily: 'var(--font-satoshi)' }}
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-sky-blue text-white font-semibold rounded-xl hover:bg-sky-blue/90 transition-all shadow-md hover:shadow-lg whitespace-nowrap"
+              className="px-8 py-3.5 bg-goon-orange text-white font-bold rounded-xl hover:bg-goon-orange/90 transition-all shadow-lg shadow-goon-orange/20 whitespace-nowrap tracking-wide"
+              style={{ fontFamily: 'var(--font-satoshi)' }}
             >
               Join Waitlist
             </button>
           </form>
         ) : (
-          <div className="bg-mint/20 rounded-xl p-6 max-w-md mx-auto">
-            <div className="text-2xl mb-2">🎉</div>
-            <p className="font-semibold text-charcoal mb-1">You&apos;re on the list!</p>
-            <p className="text-sm text-dark-gray/70">We&apos;ll notify you at <strong>{email}</strong> when we launch.</p>
+          <div className="bg-goon-green/10 border border-goon-green/20 rounded-xl p-6 max-w-md mx-auto">
+            <p className="font-bold text-white mb-1" style={{ fontFamily: 'var(--font-satoshi)' }}>
+              You're on the list.
+            </p>
+            <p className="text-sm text-white/40" style={{ fontFamily: 'var(--font-satoshi)' }}>
+              We'll reach out to <span className="text-white/60">{email}</span> when we're ready.
+            </p>
           </div>
         )}
       </div>
