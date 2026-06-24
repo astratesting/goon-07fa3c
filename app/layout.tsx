@@ -9,8 +9,8 @@ const archivoBlack = Archivo_Black({
 })
 
 export const metadata: Metadata = {
-  title: 'Goon — Your Space. Your Style. Your Sanctuary.',
-  description: 'A safe, affirming grooming space for gay men. Haircuts, grooming, facials, and massage — built for you. Coming soon.',
+  title: 'Goon — Your Space. Your Style. Your Community.',
+  description: 'A safe, affirming grooming studio built exclusively for gay men. Premium haircuts, shaves, facials, waxing, and massage in West Hollywood, CA.',
 }
 
 export default function RootLayout({

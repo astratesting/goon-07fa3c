@@ -25,6 +25,9 @@ export default function FounderStory() {
             <p>
               We're not trying to be trendy or "edgy." We're building a neighborhood spot with real craft, real warmth, and zero asterisks. You walk in, you're home.
             </p>
+            <p className="text-white/70 font-medium border-l-2 border-goon-orange/40 pl-5">
+              Our mission is simple: create safe, affirming, premium grooming spaces exclusively for gay men. Not as a marketing angle — as a promise. Every product choice, every appointment flow, every detail of the space is built around you.
+            </p>
           </div>
 
           <div className="mt-8 pt-6 border-t border-white/10 flex items-center gap-4">

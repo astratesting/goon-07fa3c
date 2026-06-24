@@ -12,17 +12,17 @@ export default function Footer() {
               GOON
             </h3>
             <p className="text-sm text-white/30" style={{ fontFamily: 'var(--font-satoshi)' }}>
-              Your Space. Your Style. Your Sanctuary.
+              Your space. Your style. Your community.
             </p>
           </div>
 
           {/* Location */}
           <div className="text-center md:text-right">
             <p className="text-sm text-white/30" style={{ fontFamily: 'var(--font-satoshi)' }}>
-              Location coming soon
+              West Hollywood, CA
             </p>
             <p className="text-xs text-white/15 mt-1" style={{ fontFamily: 'var(--font-satoshi)' }}>
-              Somewhere worth the drive
+              First location — opening soon
             </p>
           </div>
         </div>

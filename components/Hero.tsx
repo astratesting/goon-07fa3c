@@ -1,8 +1,8 @@
 'use client'
 
 export default function Hero() {
-  const scrollToWaitlist = () => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+  const scrollToBooking = () => {
+    document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -34,7 +34,7 @@ export default function Hero() {
           className="text-xl md:text-2xl text-white/60 mb-10 tracking-wide"
           style={{ fontFamily: 'var(--font-satoshi)' }}
         >
-          Your Space. Your Style. Your Sanctuary.
+          Your space. Your style. Your community.
         </p>
 
         {/* Value Proposition */}
@@ -42,15 +42,15 @@ export default function Hero() {
           className="text-base md:text-lg text-white/40 max-w-xl mx-auto mb-12 leading-relaxed"
           style={{ fontFamily: 'var(--font-satoshi)' }}
         >
-          A grooming experience designed for gay men — where you can be fully yourself, no code-switching, no compromises. Just expert care in a space that gets you.
+          A safe, affirming grooming studio built exclusively for gay men. Premium haircuts, shaves, facials, and massage — in a space designed so you can be fully yourself.
         </p>
 
         {/* CTA */}
         <button
-          onClick={scrollToWaitlist}
+          onClick={scrollToBooking}
           className="px-8 py-4 bg-goon-orange text-white font-bold rounded-xl hover:bg-goon-orange/90 transition-all shadow-lg shadow-goon-orange/20 hover:shadow-goon-orange/30 hover:-translate-y-0.5 text-lg tracking-wide"
         >
-          Join the Waitlist
+          Book Your Visit
         </button>
 
         {/* Scroll indicator */}
