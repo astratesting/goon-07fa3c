@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sky-blue: #6DB5D2;
+  --mint: #A5D8C1;
+  --sand: #E8CDA0;
+  --soft-white: #F5F8FA;
+  --charcoal: #2D3436;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--soft-white);
+  color: var(--charcoal);
+  font-family: system-ui, sans-serif;
+}
+
+.lattice-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='none' stroke='%23E8CDA0' stroke-width='0.5' opacity='0.3'/%3E%3C/svg%3E");
+}
+
+.gradient-sky {
+  background: linear-gradient(135deg, #6DB5D2 0%, #A5D8C1 100%);
+}
+
+.gradient-sand {
+  background: linear-gradient(135deg, #E8CDA0 0%, #A5D8C1 100%);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
